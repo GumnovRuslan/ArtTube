@@ -1,0 +1,29 @@
+.form-control {
+  display: block;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
+  border-radius: var(--border-radius);
+  background-color: var(--palette-background-default);
+  background-clip: padding-box;
+  appearance: none;
+
+  &:focus {
+    border: 1px solid var(--palette-primary-main);
+  }
+
+  &:not(:focus) {
+    border: 1px solid var(--palette-text-secondary);
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: pxToRem(12px);
+    line-height: pxToRem(13px);
+    padding: 15px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: pxToRem(14px);
+    line-height: pxToRem(16px);
+    padding: 20px;
+  }
+}

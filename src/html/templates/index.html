@@ -1,0 +1,19 @@
+<%
+var htmlTop = { title: "About us - Shopify Theme Layout" };
+var heading = { title: 'О НАС' };
+%>
+
+<%=_.template(require('./../includes/_html-top.html').default)(htmlTop)%>
+<%=_.template(require('./../includes/header.html').default)()%>
+
+<main>
+  <%=_.template(require('./../includes/heading.html').default)(heading)%>
+  <%=_.template(require('./../includes/about-us/advantages.html').default)()%>
+  <%=_.template(require('./../includes/about-us/tagline.html').default)()%>
+  <%=_.template(require('./../includes/about-us/text-image.html').default)()%>
+  <%=_.template(require('./../includes/parallax-text.html').default)()%>
+  <%=_.template(require('./../includes/about-us/contacts.html').default)()%>
+</main>
+
+<%=_.template(require('./../includes/footer.html').default)()%>
+<%=_.template(require('./../includes/_html-bottom.html').default)()%>

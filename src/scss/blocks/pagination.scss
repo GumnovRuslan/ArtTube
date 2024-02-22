@@ -1,0 +1,90 @@
+.pagination {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 5px 9px;
+
+    @include media-breakpoint-down(xxl) {
+      font-size: pxToRem(14px);
+      line-height: pxToRem(16px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: pxToRem(16px);
+      line-height: pxToRem(18px);
+    }
+
+    @media (hover: hover) {
+      &:is(a):is(button):hover {
+        color: var(--palette-secondary-main);
+      }
+    }
+
+    &:not(.active) {
+      color: var(--palette-text-primary);
+    }
+
+    &.active {
+      font-weight: var(--typography-fontWeightBold);
+      color: var(--palette-secondary-main);
+      border: 1px solid var(--palette-secondary-main);
+      border-radius: var(--border-radius);
+    }
+
+    &:is(a) {
+      text-decoration: none;
+    }
+
+    &:is(button) {
+      background-color: transparent;
+
+      &:not(.active) {
+        border: 0;
+      }
+    }
+  }
+
+  &__prev-link,
+  &__next-link {
+    @include media-breakpoint-down(lg) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include media-breakpoint-between(lg, xxl) {
+      width: 78px;
+      height: 42px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 111px;
+      height: 54px;
+    }
+  }
+
+  &__prev-link {
+    @include media-breakpoint-down(lg) {
+      margin-right: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 20px;
+    }
+  }
+
+  &__next-link {
+    @include media-breakpoint-down(lg) {
+      margin-left: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 20px;
+    }
+  }
+}

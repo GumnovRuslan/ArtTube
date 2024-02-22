@@ -1,0 +1,25 @@
+.title {
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: break-word;
+
+  &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-family: var(--typography-fontFamily-headings);
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: pxToRem(24px);
+    line-height: pxToRem(26px);
+  }
+
+  @include media-breakpoint-between(lg, xxl) {
+    font-size: pxToRem(30px);
+    line-height: pxToRem(32px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: pxToRem(40px);
+    line-height: pxToRem(40px);
+  }
+}
