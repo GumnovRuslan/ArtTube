@@ -10,6 +10,7 @@
 @import "base/reboot";
 
 // Blocks
+@import "blocks/custom-btn";
 @import "blocks/buttons";
 @import "blocks/containers";
 @import "blocks/icons";
@@ -18,15 +19,10 @@
 @import "blocks/pagination";
 @import "blocks/text-box";
 @import "blocks/title";
+@import "blocks/section";
 
 // Sections
-// @import "sections/home/advantages";
-@import "sections/about-us/advantages";
-@import "sections/about-us/contacts";
-@import "sections/about-us/contacts---form";
-@import "sections/about-us/text-image";
-@import "sections/about-us/tagline";
-@import "sections/about-us/parallax-text";
+@import "sections/home";
 
 @import "sections/footer";
 @import "sections/header";
