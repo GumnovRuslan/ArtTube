@@ -1,220 +1,55 @@
-$font-base-url: "../../fonts/";
+$font-base-url: "../../fonts/Roboto/";
 
 @font-face {
-  font-family: "Comfortaa";
-  src: local("Comfortaa Bold"), local("Comfortaa-Bold"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: local("Comfortaa Light"), local("Comfortaa-Light"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: local("Comfortaa SemiBold"), local("Comfortaa-SemiBold"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: local("Comfortaa Regular"), local("Comfortaa-Regular"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: local("Comfortaa Medium"), local("Comfortaa-Medium"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("#{$font-base-url}Comfortaa/Comfortaa-Medium.woff2") format("woff2"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Bold"), local("Montserrat-Bold"),
-    url("#{$font-base-url}Montserrat/Montserrat-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("#{$font-base-url}Comfortaa/Comfortaa-Bold.woff2") format("woff2"),
-    url("#{$font-base-url}Comfortaa/Comfortaa-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat ExtraLight Italic"), local("Montserrat-ExtraLightItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-ExtraLightItalic.woff2") format("woff2");
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Black Italic"), local("Montserrat-BlackItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-BlackItalic.woff2") format("woff2");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat ExtraBold Italic"), local("Montserrat-ExtraBoldItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-ExtraBoldItalic.woff2") format("woff2");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Italic"), local("Montserrat-Italic"),
-    url("#{$font-base-url}Montserrat/Montserrat-Italic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Light"), local("Montserrat-Light"),
-    url("#{$font-base-url}Montserrat/Montserrat-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Bold Italic"), local("Montserrat-BoldItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-BoldItalic.woff2") format("woff2");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Black"), local("Montserrat-Black"),
-    url("#{$font-base-url}Montserrat/Montserrat-Black.woff2") format("woff2");
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"),
+    url("#{$font-base-url}Roboto-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat ExtraLight"), local("Montserrat-ExtraLight"),
-    url("#{$font-base-url}Montserrat/Montserrat-ExtraLight.woff2") format("woff2");
-  font-weight: 200;
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("#{$font-base-url}Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"),
-    url("#{$font-base-url}Montserrat/Montserrat-ExtraBold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Medium Italic"), local("Montserrat-MediumItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-MediumItalic.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Medium"), local("Montserrat-Medium"),
-    url("#{$font-base-url}Montserrat/Montserrat-Medium.woff2") format("woff2");
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+    url("#{$font-base-url}Roboto-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Light Italic"), local("Montserrat-LightItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-LightItalic.woff2") format("woff2");
+  font-family: "Roboto";
+  src: local("Roboto Regular"), local("Roboto-Regular"),
+    url("#{$font-base-url}Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("#{$font-base-url}Roboto-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Regular"), local("Montserrat-Regular"),
-    url("#{$font-base-url}Montserrat/Montserrat-Regular.woff2") format("woff2");
-  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Thin"), local("Montserrat-Thin"),
-    url("#{$font-base-url}Montserrat/Montserrat-Thin.woff2") format("woff2");
+  font-family: "Roboto";
+  src: local("Roboto Thin"), local("Roboto-Thin"),
+    url("#{$font-base-url}Roboto-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat Thin Italic"), local("Montserrat-ThinItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-ThinItalic.woff2") format("woff2");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"),
-    url("#{$font-base-url}Montserrat/Montserrat-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat SemiBold Italic"), local("Montserrat-SemiBoldItalic"),
-    url("#{$font-base-url}Montserrat/Montserrat-SemiBoldItalic.woff2") format("woff2");
-  font-weight: 600;
-  font-style: italic;
   font-display: swap;
 }

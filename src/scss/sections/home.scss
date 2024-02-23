@@ -72,7 +72,7 @@
     display: grid;
     justify-content: center;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 440px));
+    grid-template-columns: repeat(3, minmax(300px, 440px));
     gap: clamp(20px, 3vw, 40px);
     grid-auto-flow: dense;
     margin-bottom: clamp(30px, 3vw, 40px);
