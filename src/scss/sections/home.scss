@@ -241,10 +241,10 @@
     height: 95px;
     margin-bottom: clamp(20px, 5vw, 30px);
     overflow: hidden;
-    font-size: clamp(15px, 4vw, 18px);
-    line-height: clamp(19.5px, 4vw, 23.4px);
-    opacity: 50%;
-    color: #000000;
+    // font-size: clamp(15px, 4vw, 18px);
+    // line-height: clamp(19.5px, 4vw, 23.4px);
+    // opacity: 50%;
+    // color: #000000;
   }
 
   .article__date {
@@ -347,4 +347,24 @@
     font-size: clamp(26px, 4vw, 42px);
     color: #f7f7f4;
   }
+}
+
+.search-events {
+  .search-events {
+    max-width: 1000px;
+    height: 306px;
+  }
+  .search-events__card-img {
+    background: #000;
+  }
+  .search-events__card-title {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 15px;
+    }
+  }
+  // .search-events__card-text {
+  // }
 }
