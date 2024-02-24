@@ -141,6 +141,10 @@
   .card__block:not(:last-child) {
     margin-bottom: 12px;
   }
+  .card__block-svg {
+    width: 17px;
+    height: 17px;
+  }
 
   .card__tags {
     display: flex;
@@ -350,21 +354,14 @@
 }
 
 .search-events {
-  .search-events {
-    max-width: 1000px;
-    height: 306px;
+  .search-events__container {
+    display: flex;
+    gap: 40px;
   }
-  .search-events__card-img {
-    background: #000;
+
+  .search-events__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
-  .search-events__card-title {
-    @include media-breakpoint-up(md) {
-      margin-bottom: 10px;
-    }
-    @include media-breakpoint-down(md) {
-      margin-bottom: 15px;
-    }
-  }
-  // .search-events__card-text {
-  // }
 }

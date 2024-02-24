@@ -1,0 +1,81 @@
+.filter {
+  min-width: 358px;
+  height: 100%;
+  background: white;
+  border: 1px solid #0000001a;
+
+  .filter__quantity {
+    padding: 20px 30px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31.2px;
+    color: black;
+    opacity: 50%;
+    border-bottom: 1px solid #0000001a;
+  }
+
+  .filter__content {
+    padding: 20px 30px 30px 30px;
+  }
+
+  .filter__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31.2px;
+    color: black;
+    margin-bottom: 25px;
+  }
+
+  .filter__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .filter__item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    .filter__checkbox {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      background: #000;
+    }
+
+    .filter__item-text {
+      font-size: 20px;
+      line-height: 23.44px;
+      color: #100e0e;
+    }
+  }
+
+  .filter__button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .filter__btn-complete,
+    .filter__btn-reset {
+      padding: 15px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 10.5px;
+      letter-spacing: 3%;
+      text-transform: uppercase;
+      border: 2px solid #100e0e;
+    }
+
+    .filter__btn-complete {
+      background: #100e0e;
+      color: white;
+    }
+
+    .filter__btn-reset {
+      background: white;
+      color: #100e0e;
+    }
+  }
+}
