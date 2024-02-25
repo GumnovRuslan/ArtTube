@@ -1,21 +1,32 @@
-$size: 305px;
+// $size: 305px;
 
 .search-events__card {
   display: flex;
   border: 1px solid var(--color-border);
   height: 100%;
 
-  .search-events__card-picture {
-    min-width: $size;
-    height: $size;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
 
-    .search-events__card-img {
+  .search-events__card-picture {
+    display: block;
+    min-width: 305px;
+    height: 100%;
+
+    img {
+      display: block;
       object-fit: cover;
     }
   }
 
   .search-events__card-content {
-    padding: 30px 35px 25px 35px;
+    @include media-breakpoint-up(md) {
+      padding: 30px 35px 25px;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 20px 20px 25px;
+    }
   }
 
   .search-events__card-title {
@@ -34,8 +45,15 @@ $size: 305px;
   .search-events__card-info {
     display: flex;
     flex-direction: column;
-    gap: 14px;
     margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      gap: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 12px;
+    }
   }
 
   .search-events__card-date,

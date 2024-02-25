@@ -13,23 +13,38 @@
 
     @include media-breakpoint-up(sm) {
       justify-content: center;
-      margin: 0 clamp(20px, 6.3vw, 100px);
+      margin: 0 clamp(35px, 6.3vw, 100px);
       max-width: 600px;
     }
 
     @include media-breakpoint-down(sm) {
       justify-content: start;
-      margin: 0 clamp(20px, 4vw, 100px);
+      margin: 0 clamp(20px, 6vw, 35px);
       padding-top: 107px;
       max-width: 300px;
     }
   }
 
   .hero__title {
+    text-transform: uppercase;
     font-weight: 400;
-    font-size: clamp(30px, 3vw, 50px);
-    line-height: clamp(39px, 3vw, 58.59px);
     color: white;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: 50px;
+      line-height: 58.59px;
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+      line-height: 39px;
+    }
   }
 
   .hero__text {
@@ -56,6 +71,20 @@
   }
 }
 
+.advertising {
+  @include media-breakpoint-up(xl) {
+    padding: 112px clamp(100px, 16vw, 259px) 100px;
+  }
+
+  @include media-breakpoint-between(md, xxl) {
+    padding: 112px clamp(20px, 11vw, 180px) 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
 .events {
   .events__title {
     margin-bottom: clamp(30px, 5vw, 60px);
@@ -72,24 +101,15 @@
     display: grid;
     justify-content: center;
     justify-items: center;
-    grid-template-columns: repeat(3, minmax(300px, 440px));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 440px));
     gap: clamp(20px, 3vw, 40px);
     grid-auto-flow: dense;
     margin-bottom: clamp(30px, 3vw, 40px);
   }
 
   .events__card {
-    max-height: 540px;
     background: white;
-    border: 1px solid #0000001a;
-
-    @include media-breakpoint-up(md) {
-      max-width: 440px;
-    }
-
-    @include media-breakpoint-down(md) {
-      max-width: 375px;
-    }
+    border: 1px solid var(--color-border);
   }
 
   .card__picture {
@@ -357,11 +377,22 @@
   .search-events__container {
     display: flex;
     gap: 40px;
+
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+    }
   }
 
   .search-events__cards {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+
+    @include media-breakpoint-up(md) {
+      gap: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 20px;
+    }
   }
 }
