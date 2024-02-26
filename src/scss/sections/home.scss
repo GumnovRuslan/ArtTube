@@ -374,7 +374,26 @@
 }
 
 .search-events {
-  .search-events__container {
+  .search-events__map-link {
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+    color: var(--color-orange, #ff711f);
+    margin-bottom: 50px;
+  }
+
+  .search-events__map-svg {
+    width: 24px;
+    height: 21px;
+  }
+
+  .search-events__map-text {
+    font-size: 18px;
+    line-height: 21.09px;
+    color: inherit;
+  }
+
+  .search-events__content {
     display: flex;
     gap: 40px;
 
