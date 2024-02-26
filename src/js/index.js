@@ -9,5 +9,5 @@ filterBtnReset.addEventListener("click", filterClean);
 
 let checkbox = document.getElementById("checkbox-menu");
 checkbox.addEventListener("input", (e) => {
-  document.body.style.position = e.target.checked ? "fixed" : "static";
+  if (window.innerWidth < 480) document.body.style.position = e.target.checked ? "fixed" : "static";
 });

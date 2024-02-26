@@ -1,20 +1,41 @@
 .header {
   width: 100%;
-  #checkbox-menu {
+
+  #checkbox-menu,
+  #checkbox-login {
     display: none;
   }
 
+  #checkbox-login:checked ~ .header__inner .header__login {
+    display: block;
+  }
+  #checkbox-login:checked ~ .header__inner .header__nav {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
   #checkbox-menu:checked ~ .header__inner > .header__menu {
-    left: 0%;
+    @include media-breakpoint-down(sm) {
+      left: 0px;
+    }
+  }
+
+  #checkbox-menu:checked ~ .header__inner .header__nav {
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
   }
 
   #checkbox-menu:checked ~ .header__inner .header__burger-line:nth-child(2) {
     opacity: 0;
     width: 0%;
   }
+
   #checkbox-menu:checked ~ .header__inner .header__burger-line:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
+
   #checkbox-menu:checked ~ .header__inner .header__burger-line:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
@@ -22,8 +43,17 @@
   .header__inner {
     position: relative;
     z-index: 4;
-    padding: 0 20px;
     background: var(--color-bg-0, #ffffff);
+
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      padding: 0 100px;
+      height: 115px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+    }
   }
 
   .header__front {
@@ -33,13 +63,6 @@
     @include media-breakpoint-down(sm) {
       justify-content: space-between;
     }
-  }
-
-  .header__logo {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    height: 70px;
   }
 
   .header__burger {
@@ -75,6 +98,21 @@
     transform-origin: 50% 50%;
   }
 
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 70px;
+
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+  }
+
   .header__logo-logo {
     width: 40px;
     height: 40px;
@@ -90,25 +128,65 @@
   }
 
   .header__menu {
-    position: absolute;
     z-index: 3;
     top: calc(0px + 70px);
     left: 100%;
     display: flex;
-    flex-direction: column;
     width: 100%;
-    min-height: calc(100vh - 70px);
-    max-height: calc(100vh - 70px);
-    padding: 0 20px;
     background: var(--color-bg-0, #ffffff);
     transition: all 0.5s ease-in-out;
+
+    @include media-breakpoint-up(sm) {
+      position: static;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      flex-direction: column;
+      min-height: calc(100vh - 70px);
+      max-height: calc(100vh - 70px);
+      padding: 0 20px;
+    }
   }
 
-  .header__buttons {
+  .header__buttons-top,
+  .header__buttons-bottom {
     display: flex;
+
+    @include media-breakpoint-up(sm) {
+      gap: 50px;
+      height: 40px;
+    }
+  }
+
+  .header__buttons-top {
     justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--color-border);
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+  .header__buttons-bottom {
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0 25px;
+      border-top: 1px solid var(--color-border);
+    }
+  }
+
+  .header__btn-menu {
+    padding: 8px 19px;
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    background: var(--color-bg-0, #ffffff);
+    color: var(--color-light-black, #100e0e);
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   .header__btn-language,
@@ -119,10 +197,6 @@
     gap: 6px;
     text-decoration: none;
     color: var(--color-orange);
-  }
-  .header__btn-location {
-    padding: 20px 0 25px;
-    border-top: 1px solid var(--color-border);
   }
 
   .header__btn-language-text,
@@ -148,17 +222,136 @@
   .header__nav {
     flex: 1 1 auto;
     overflow: auto;
+    background: var(--color-bg-0, #ffffff);
+
+    @include media-breakpoint-up(sm) {
+      display: none;
+      position: absolute;
+      max-width: 450px;
+      padding: 34px 47px 39px;
+      left: 100px;
+      top: 100%;
+      border: 1px solid var(--color-border);
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      padding: 22px 0;
+    }
   }
+
   .header__nav-links {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 20px 0;
+
+    @include media-breakpoint-up(sm) {
+      padding: 20px 0;
+    }
   }
+
   .header__nav-link {
     text-decoration: none;
     font-size: 20px;
     line-height: 23.44px;
     color: var(--color-black, #000000);
+  }
+
+  .header__login {
+    flex: 1 1 auto;
+    display: none;
+    background: var(--color-bg-0, #ffffff);
+
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      right: 100px;
+      z-index: 4;
+      top: 100%;
+      left: auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .header__login-form {
+    @include media-breakpoint-up(sm) {
+      padding: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 30px 0;
+    }
+  }
+
+  .header__login-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .header__login-input {
+    height: 50px;
+    padding: 0 25px;
+    font-size: 18px;
+    line-height: 21.09px;
+    border: 1px solid var(--color-border);
+    color: #4d4d4d;
+  }
+
+  .header__login-networks {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 23px;
+  }
+
+  .header__login-network {
+    width: 34px;
+    height: 34px;
+    background: #000;
+    border-radius: 5px;
+  }
+
+  .header__login-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+
+  .header__login-remember {
+    flex: 100%;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+  }
+
+  .header__login-remember-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__login-remember-text {
+    line-height: 18.75px;
+    color: var(--color-light-black);
+  }
+
+  .header__login-helper {
+    display: flex;
+    gap: 10px;
+  }
+
+  .header__login-helper-text {
+    text-decoration: none;
+    line-height: 18.75px;
+    color: var(--color-orange);
+  }
+
+  .header__login-helper-separator {
+    color: var(--color-gray);
   }
 }
