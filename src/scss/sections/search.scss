@@ -3,13 +3,14 @@
     display: flex;
     justify-content: end;
     gap: 7px;
-    color: var(--color-orange, #ff711f);
+    color: var(--color-text-secondary, #ff711f);
     margin-bottom: 50px;
   }
 
-  .search-events__map-svg {
+  .search-events__map-icon {
     width: 24px;
     height: 21px;
+    color: var(--icon-secondary-color);
   }
 
   .search-events__map-text {

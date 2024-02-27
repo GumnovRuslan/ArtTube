@@ -1,0 +1,11 @@
+.button {
+  width: 100%;
+  padding: 20px;
+  background: var(--color-btn, #ff711f);
+
+  &__text {
+    font-size: 18px;
+    line-height: 21.09px;
+    color: var(--color-text-900, #ffffff);
+  }
+}

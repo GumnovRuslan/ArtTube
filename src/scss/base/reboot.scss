@@ -1,14 +1,11 @@
-:root {
-  font-size: var(--typography-htmlFontSize);
-}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: var(--typography-fontFamily);
 }
 
 body {
-  font-family: var(--typography-fontFamily);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -21,17 +18,13 @@ html {
   overflow-x: hidden;
 }
 
-.rub::after {
-  content: " ₽";
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--typography-fontFamily-headings);
+  font-family: var(--typography-fontFamily);
 }
 
 h1,
@@ -64,6 +57,9 @@ textarea {
 
 button {
   cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: var(--typography-htmlFontSize);
 }
 
 input,
@@ -78,32 +74,8 @@ textarea {
     opacity: 0.5;
   }
 }
+
 img {
   width: 100%;
   height: 100%;
-}
-.spacing-top {
-  @include media-breakpoint-down(xxl) {
-    padding-top: 40px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding-top: 60px;
-  }
-}
-
-.spacing-bottom {
-  @include media-breakpoint-down(xxl) {
-    padding-bottom: 40px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding-bottom: 60px;
-  }
-}
-
-.block-center {
-  max-width: max-content;
-  margin-right: auto;
-  margin-left: auto;
 }

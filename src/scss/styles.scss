@@ -11,19 +11,17 @@
 
 // Blocks
 @import "blocks/custom-btn";
-@import "blocks/buttons";
+@import "blocks/button";
 @import "blocks/search-card";
 @import "blocks/filter";
 @import "blocks/banner";
 @import "blocks/search";
 @import "blocks/card-institution";
+@import "blocks/card_event";
 
 @import "blocks/title";
 @import "blocks/section";
 @import "blocks/custom-scroll";
-
-@import "blocks/card-text";
-@import "blocks/card-title";
 
 // Sections
 @import "sections/home";
@@ -32,6 +30,5 @@
 
 @import "sections/footer";
 @import "sections/header";
-@import "blocks/nav-list";
 
 // Templates

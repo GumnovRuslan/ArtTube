@@ -6,11 +6,13 @@
   --color-text-black: #000000;
   --color-text-black-5: #00000080;
   --color-text-primary: #100e0e;
+  --color-text-primary-25: #100e0e40;
   --color-text-secondary: #ff711f;
   --color-text-3: #100e0e4d;
 
   --color-text-900: #ffffff;
-  --color-text-700: #33333378;
+  --color-text-700: #333333;
+
   --color-btn: #ff711f;
 
   --color-bg-100: #f5f5f5;
@@ -23,25 +25,20 @@
 
   --color-gray: #dbdbdb;
 
-  --color-svg-primary: var(--color-light-black);
-  --color-svg-secondary: var(--color-orange);
-
   --icon-primary-color: #100e0e;
   --icon-secondary-color: #ff711f;
   --icon-third-color: #100e0e40;
 
-  --border-radius: 5px;
-
   --typography-htmlFontSize: 16px;
   --typography-fontFamily: Roboto, sans-serif;
-  --typography-fontWeightLight: 300;
-  --typography-fontWeightMedium: 500;
-  --typography-fontWeightBold: 700;
+  // --typography-fontWeightLight: 300;
+  // --typography-fontWeightMedium: 500;
+  // --typography-fontWeightBold: 700;
 
-  --filters-blur: 10px;
-  --filters-opacity: 0.5;
+  // --filters-blur: 10px;
+  // --filters-opacity: 0.5;
 
-  --spacing-container: 24px;
+  // --spacing-container: 24px;
 }
 
 // section {
@@ -55,7 +52,3 @@
 //     --margin-bottom: var(--margin-bottom-mobile, 0);
 //   }
 // }
-
-.svg-secondary {
-  color: var(--color-svg-secondary);
-}

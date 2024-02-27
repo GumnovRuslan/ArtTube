@@ -2,27 +2,39 @@
   width: 100%;
 
   #checkbox-menu,
-  #checkbox-login {
+  #checkbox-login,
+  #checkbox-language {
     display: none;
+  }
+
+  .language-en {
+    display: none;
+  }
+
+  #checkbox-language:checked ~ .header__inner .language-ru {
+    display: none;
+  }
+  #checkbox-language:checked ~ .header__inner .language-en {
+    display: block;
   }
 
   #checkbox-login:checked ~ .header__inner .header__login {
     display: block;
   }
   #checkbox-login:checked ~ .header__inner .header__nav {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
 
   #checkbox-menu:checked ~ .header__inner > .header__menu {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       left: 0px;
     }
   }
 
   #checkbox-menu:checked ~ .header__inner .header__nav {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       display: block;
     }
   }
@@ -45,13 +57,20 @@
     z-index: 4;
     background: var(--color-bg-0, #ffffff);
 
-    @include media-breakpoint-up(sm) {
-      display: flex;
+    @include media-breakpoint-up(lg) {
       padding: 0 100px;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
       height: 115px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-between(md, lg) {
+      padding: 0 50px;
+    }
+
+    @include media-breakpoint-down(md) {
       padding: 0 20px;
     }
   }
@@ -60,7 +79,7 @@
     display: flex;
     align-items: center;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       justify-content: space-between;
     }
   }
@@ -74,7 +93,7 @@
     width: 42px;
     height: 40px;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       display: none;
     }
   }
@@ -104,7 +123,7 @@
     gap: 9px;
     height: 70px;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       position: absolute;
       left: 50%;
       top: 50%;
@@ -113,16 +132,18 @@
     }
   }
 
-  .header__logo-logo {
+  .header__logo-logo-icon {
     width: 40px;
     height: 40px;
+    color: var(--icon-secondary-color);
   }
 
-  .header__logo-text {
+  .header__logo-text-icon {
     width: 96px;
     height: 19px;
+    color: var(--icon-primary-color);
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
@@ -136,14 +157,14 @@
     background: var(--color-bg-0, #ffffff);
     transition: all 0.5s ease-in-out;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       position: static;
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       position: absolute;
       flex-direction: column;
       min-height: calc(100vh - 70px);
@@ -156,7 +177,7 @@
   .header__buttons-bottom {
     display: flex;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       gap: 50px;
       height: 40px;
     }
@@ -165,13 +186,13 @@
   .header__buttons-top {
     justify-content: space-between;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 20px 0;
       border-bottom: 1px solid var(--color-border);
     }
   }
   .header__buttons-bottom {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 20px 0 25px;
       border-top: 1px solid var(--color-border);
     }
@@ -184,7 +205,7 @@
     background: var(--color-bg-0, #ffffff);
     color: var(--color-light-black, #100e0e);
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
@@ -196,7 +217,7 @@
     align-items: center;
     gap: 6px;
     text-decoration: none;
-    color: var(--color-orange);
+    color: var(--color-text-secondary, #ff711f);
   }
 
   .header__btn-language-text,
@@ -213,10 +234,13 @@
   .header__btn-login-icon {
     width: 24px;
     height: 24px;
+    color: var(--icon-secondary-color);
   }
+
   .header__btn-location-icon {
     width: 20px;
     height: 24px;
+    color: var(--icon-secondary-color);
   }
 
   .header__nav {
@@ -224,7 +248,7 @@
     overflow: auto;
     background: var(--color-bg-0, #ffffff);
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       display: none;
       position: absolute;
       max-width: 450px;
@@ -234,7 +258,7 @@
       border: 1px solid var(--color-border);
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       position: relative;
       padding: 22px 0;
     }
@@ -245,7 +269,7 @@
     flex-direction: column;
     gap: 25px;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       padding: 20px 0;
     }
   }
@@ -254,7 +278,7 @@
     text-decoration: none;
     font-size: 20px;
     line-height: 23.44px;
-    color: var(--color-black, #000000);
+    color: var(--color-text-black, #000000);
   }
 
   .header__login {
@@ -262,7 +286,7 @@
     display: none;
     background: var(--color-bg-0, #ffffff);
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       position: absolute;
       right: 100px;
       z-index: 4;
@@ -270,18 +294,18 @@
       left: auto;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       width: 100%;
       height: 100%;
     }
   }
 
   .header__login-form {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       padding: 60px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       padding: 30px 0;
     }
   }
@@ -299,7 +323,7 @@
     font-size: 18px;
     line-height: 21.09px;
     border: 1px solid var(--color-border);
-    color: #4d4d4d;
+    color: var(--color-text-primary-25, #100e0e40);
   }
 
   .header__login-networks {
@@ -337,7 +361,7 @@
 
   .header__login-remember-text {
     line-height: 18.75px;
-    color: var(--color-light-black);
+    color: var(--color-text-primary);
   }
 
   .header__login-helper {
@@ -348,10 +372,10 @@
   .header__login-helper-text {
     text-decoration: none;
     line-height: 18.75px;
-    color: var(--color-orange);
+    color: var(--color-text-secondary);
   }
 
   .header__login-helper-separator {
-    color: var(--color-gray);
+    color: var(--color-text-primary-25);
   }
 }
