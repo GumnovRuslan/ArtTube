@@ -1,4 +1,9 @@
 .card-title {
+  font-weight: 500;
+  color: var(--color-light-black, #100e0e);
+  font-size: 24px;
+  line-height: 31.2px;
+
   &--primary {
     font-weight: 500;
     color: var(--color-light-black, #100e0e);
@@ -7,6 +12,7 @@
       font-size: 20px;
       line-height: 31.2px;
     }
+
     @include media-breakpoint-up(md) {
       font-size: 24px;
       line-height: 26px;

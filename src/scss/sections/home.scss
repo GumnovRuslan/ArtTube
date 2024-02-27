@@ -416,3 +416,55 @@
     }
   }
 }
+
+.institution {
+  @include media-breakpoint-up(xl) {
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+
+  @include media-breakpoint-between(md, xl) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .institution__title {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-between(md, xl) {
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+  }
+
+  .institution__cards {
+    display: grid;
+    margin-bottom: 40px;
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+}
