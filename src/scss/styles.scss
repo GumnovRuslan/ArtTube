@@ -1,5 +1,5 @@
 // Libs
-@import "~modern-normalize/modern-normalize.css";
+// @import "~modern-normalize/modern-normalize.css";
 
 // Base
 @import "base/variables";
@@ -27,6 +27,7 @@
 
 // Sections
 @import "sections/home";
+@import "sections/search";
 @import "sections/event-detail";
 
 @import "sections/footer";

@@ -3,10 +3,14 @@
   --color-light-black: #100e0e;
   --color-orange: #ff711f;
 
-  --color-border: #e0e0de;
+  --color-text-black: #000000;
+  --color-text-black-5: #00000080;
+  --color-text-primary: #100e0e;
+  --color-text-secondary: #ff711f;
+  --color-text-3: #100e0e4d;
 
   --color-text-900: #ffffff;
-  --color-text-700: #333333;
+  --color-text-700: #33333378;
   --color-btn: #ff711f;
 
   --color-bg-100: #f5f5f5;
@@ -15,10 +19,16 @@
   --color-bg-0: #ffffff;
   --color-bg-700: #4d4d4d;
 
+  --color-border: #100e0e1a;
+
   --color-gray: #dbdbdb;
 
   --color-svg-primary: var(--color-light-black);
   --color-svg-secondary: var(--color-orange);
+
+  --icon-primary-color: #100e0e;
+  --icon-secondary-color: #ff711f;
+  --icon-third-color: #100e0e40;
 
   --border-radius: 5px;
 
@@ -33,6 +43,18 @@
 
   --spacing-container: 24px;
 }
+
+// section {
+//   margin-top: var(--margin-top, 0);
+//   margin-bottom: var(--margin-bottom, 0);
+// }
+
+// @include media-breakpoint-down(sm) {
+//   section {
+//     --margin-top: var(--margin-top-mobile, 0);
+//     --margin-bottom: var(--margin-bottom-mobile, 0);
+//   }
+// }
 
 .svg-secondary {
   color: var(--color-svg-secondary);
