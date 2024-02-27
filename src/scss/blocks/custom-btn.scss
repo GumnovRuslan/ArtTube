@@ -23,7 +23,7 @@
     background: var(--color-btn, #ff711f);
     border: none;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       width: 100%;
     }
   }
