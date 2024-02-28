@@ -116,10 +116,16 @@
     }
   }
 
-  &__btn {
+  &__button {
     margin: 0 auto;
+    font-size: 18px;
+
     @include media-breakpoint-up(md) {
       max-width: 240px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0 20px;
     }
   }
 }
@@ -241,8 +247,7 @@
     background: transparent;
 
     @include media-breakpoint-down(md) {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 0 20px;
     }
   }
 
@@ -302,9 +307,16 @@
     padding: 0 20px;
   }
 
-  &__btn {
+  &__button {
+    margin: 0 auto;
+    font-size: 18px;
+
+    @include media-breakpoint-up(sm) {
+      width: 242px;
+    }
+
     @include media-breakpoint-down(sm) {
-      width: calc(100vw - 40px);
+      padding: 0 20px;
     }
   }
 
@@ -366,5 +378,11 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
     }
+  }
+
+  &__button {
+    font-size: 18px;
+    width: 242px;
+    margin: 0 auto;
   }
 }

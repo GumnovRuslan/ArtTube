@@ -1,6 +1,6 @@
 .custom-section {
-  @include media-breakpoint-down(sm) {
-    padding: 0;
+  @include media-breakpoint-up(xl) {
+    padding: 0 100px;
   }
 
   @include media-breakpoint-between(sm, xl) {
@@ -11,7 +11,7 @@
   //   padding: 0 85px;
   // }
 
-  @include media-breakpoint-up(xl) {
-    padding: 0 100px;
+  @include media-breakpoint-down(sm) {
+    padding: 0;
   }
 }
