@@ -172,7 +172,12 @@
 
   &__map {
     width: 100%;
-    background: green;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     @include media-breakpoint-up(md) {
       max-width: 600px;
