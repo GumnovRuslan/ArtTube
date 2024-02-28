@@ -1,25 +1,32 @@
 .search-events {
-  .search-events__map-link {
+  &__map-link {
     display: flex;
-    justify-content: end;
     gap: 7px;
     color: var(--color-text-secondary, #ff711f);
     margin-bottom: 50px;
+    text-decoration: none;
+
+    @include media-breakpoint-up(md) {
+      justify-content: end;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0 20px;
+    }
   }
 
-  .search-events__map-icon {
+  &__map-link-icon {
     width: 24px;
     height: 21px;
-    color: var(--icon-secondary-color);
   }
 
-  .search-events__map-text {
+  &__map-link-text {
     font-size: 18px;
     line-height: 21.09px;
     color: inherit;
   }
 
-  .search-events__content {
+  &__content {
     display: flex;
     gap: 40px;
 
@@ -28,7 +35,7 @@
     }
   }
 
-  .search-events__filter {
+  &__filter {
     @include media-breakpoint-up(xl) {
       flex: 1 0 auto;
       max-width: 26%;
@@ -42,7 +49,7 @@
     }
   }
 
-  .search-events__cards {
+  &__cards {
     display: flex;
     flex-direction: column;
 
