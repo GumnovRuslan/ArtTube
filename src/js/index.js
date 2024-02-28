@@ -1,14 +1,12 @@
-import { filterComplete, filterClean } from "../js/includes/filter.js";
-
 function isTrue(el, func) {
   if (!!el) func(el);
 }
 const filter = document.getElementById("filter");
-const filterBtnCompleter = filter.querySelector(".filter__btn-complete");
+const filterBtnComplete = filter.querySelector(".filter__btn-complete");
 const filterBtnReset = filter.querySelector(".filter__btn-reset");
 
-filterBtnCompleter.addEventListener("click", filterComplete);
-filterBtnReset.addEventListener("click", filterClean);
+// filterBtnComplete.addEventListener("click", filterComplete);
+// filterBtnReset.addEventListener("click", filterClean);
 
 let checkbox = document.getElementById("checkbox-menu");
 checkbox.addEventListener("input", (e) => {

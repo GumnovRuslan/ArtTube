@@ -9,7 +9,6 @@
   .search-events__card-image {
     flex: 1 0 auto;
     width: 305px;
-    height: 305px;
 
     @include media-breakpoint-down(md) {
       width: 100%;

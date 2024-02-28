@@ -29,9 +29,17 @@
   }
 
   .search-events__filter {
-    flex: 1 0 auto;
-    width: 25%;
-    height: 100%;
+    @include media-breakpoint-up(xl) {
+      flex: 1 0 auto;
+      max-width: 26%;
+      width: 100%;
+      height: 100%;
+    }
+    @include media-breakpoint-down(xl) {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   .search-events__cards {
