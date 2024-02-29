@@ -1,0 +1,15 @@
+<%
+var htmlTop = { title: "ArtTube blog" };
+%>
+
+<%=_.template(require('./../includes/_html-top.html').default)(htmlTop)%>
+<%=_.template(require('./../includes/header.html').default)()%>
+
+<%=_.template(require('./../includes/search.html').default)()%>
+
+<main>
+    <%=_.template(require('./../includes/blog.html').default)()%>
+</main>
+
+<%=_.template(require('./../includes/footer.html').default)()%>
+<%=_.template(require('./../includes/_html-bottom.html').default)()%>

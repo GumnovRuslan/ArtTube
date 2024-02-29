@@ -1,0 +1,40 @@
+.blog {
+  &__title {
+    font-weight: 400;
+    color: var(--color-text-primary);
+
+    @include media-breakpoint-up(md) {
+      font-size: 42px;
+      line-height: 49.22px;
+      margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+      line-height: 28.13px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    @include media-breakpoint-up(md) {
+      gap: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: 242px;
+    }
+  }
+}
