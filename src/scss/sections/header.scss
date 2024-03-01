@@ -11,48 +11,48 @@
     display: none;
   }
 
-  #checkbox-language:checked ~ .header__inner .language-ru {
+  #checkbox-language:checked ~ &__inner .language-ru {
     display: none;
   }
-  #checkbox-language:checked ~ .header__inner .language-en {
+  #checkbox-language:checked ~ &__inner .language-en {
     display: block;
   }
 
-  #checkbox-login:checked ~ .header__inner .header__login {
+  #checkbox-login:checked ~ &__inner &__login {
     display: block;
   }
-  #checkbox-login:checked ~ .header__inner .header__nav {
+  #checkbox-login:checked ~ &__inner &__nav {
     @include media-breakpoint-down(md) {
       display: none;
     }
   }
 
-  #checkbox-menu:checked ~ .header__inner > .header__menu {
+  #checkbox-menu:checked ~ &__inner > &__menu {
     @include media-breakpoint-down(md) {
       left: 0px;
     }
   }
 
-  #checkbox-menu:checked ~ .header__inner .header__nav {
+  #checkbox-menu:checked ~ &__inner &__nav {
     @include media-breakpoint-up(md) {
       display: block;
     }
   }
 
-  #checkbox-menu:checked ~ .header__inner .header__burger-line:nth-child(2) {
+  #checkbox-menu:checked ~ &__inner &__burger-line:nth-child(2) {
     opacity: 0;
     width: 0%;
   }
 
-  #checkbox-menu:checked ~ .header__inner .header__burger-line:nth-child(1) {
+  #checkbox-menu:checked ~ &__inner &__burger-line:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
 
-  #checkbox-menu:checked ~ .header__inner .header__burger-line:nth-child(3) {
+  #checkbox-menu:checked ~ &__inner &__burger-line:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
 
-  .header__inner {
+  &__inner {
     position: relative;
     z-index: 4;
     background: var(--color-bg-0, #ffffff);
@@ -75,7 +75,7 @@
     }
   }
 
-  .header__front {
+  &__front {
     display: flex;
     align-items: center;
 
@@ -84,7 +84,7 @@
     }
   }
 
-  .header__burger {
+  &__burger {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@
     }
   }
 
-  .header__burger-container {
+  &__burger-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@
     gap: 4px;
   }
 
-  .header__burger-line {
+  &__burger-line {
     width: 100%;
     height: 2px;
     border-radius: 10px;
@@ -117,7 +117,7 @@
     transform-origin: 50% 50%;
   }
 
-  .header__logo {
+  &__logo {
     display: flex;
     align-items: center;
     gap: 9px;
@@ -132,13 +132,13 @@
     }
   }
 
-  .header__logo-logo-icon {
+  &__logo-logo-icon {
     width: 40px;
     height: 40px;
     color: var(--icon-secondary-color);
   }
 
-  .header__logo-text-icon {
+  &__logo-text-icon {
     width: 96px;
     height: 19px;
     color: var(--icon-primary-color);
@@ -148,7 +148,7 @@
     }
   }
 
-  .header__menu {
+  &__menu {
     z-index: 3;
     top: calc(0px + 70px);
     left: 100%;
@@ -173,8 +173,8 @@
     }
   }
 
-  .header__buttons-top,
-  .header__buttons-bottom {
+  &__buttons-top,
+  &__buttons-bottom {
     display: flex;
 
     @include media-breakpoint-up(md) {
@@ -183,7 +183,7 @@
     }
   }
 
-  .header__buttons-top {
+  &__buttons-top {
     justify-content: space-between;
 
     @include media-breakpoint-down(md) {
@@ -191,14 +191,14 @@
       border-bottom: 1px solid var(--color-border);
     }
   }
-  .header__buttons-bottom {
+  &__buttons-bottom {
     @include media-breakpoint-down(md) {
       padding: 20px 0 25px;
       border-top: 1px solid var(--color-border);
     }
   }
 
-  .header__btn-menu {
+  &__btn-menu {
     padding: 8px 19px;
     border: 1px solid var(--color-border);
     border-radius: 50px;
@@ -210,40 +210,41 @@
     }
   }
 
-  .header__btn-language,
-  .header__btn-login,
-  .header__btn-location {
+  &__btn-language,
+  &__btn-login,
+  &__btn-location {
     display: flex;
     align-items: center;
     gap: 6px;
     text-decoration: none;
     color: var(--color-text-secondary, #ff711f);
+    font-size: 18px;
   }
 
-  .header__btn-language-text,
-  .header__btn-login-text,
-  .header__btn-location-text {
+  &__btn-language-text,
+  &__btn-login-text,
+  &__btn-location-text {
     color: inherit;
   }
 
-  .header__btn-language-text {
+  &__btn-language-text {
     text-transform: uppercase;
   }
 
-  .header__btn-language-icon,
-  .header__btn-login-icon {
+  &__btn-language-icon,
+  &__btn-login-icon {
     width: 24px;
     height: 24px;
     color: var(--icon-secondary-color);
   }
 
-  .header__btn-location-icon {
+  &__btn-location-icon {
     width: 20px;
     height: 24px;
     color: var(--icon-secondary-color);
   }
 
-  .header__nav {
+  &__nav {
     flex: 1 1 auto;
     overflow: auto;
     background: var(--color-bg-0, #ffffff);
@@ -264,7 +265,7 @@
     }
   }
 
-  .header__nav-links {
+  &__nav-links {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -274,14 +275,14 @@
     }
   }
 
-  .header__nav-link {
+  &__nav-link {
     text-decoration: none;
     font-size: 20px;
     line-height: 23.44px;
     color: var(--color-text-black, #000000);
   }
 
-  .header__login {
+  &__login {
     flex: 1 1 auto;
     display: none;
     background: var(--color-bg-0, #ffffff);
@@ -300,7 +301,7 @@
     }
   }
 
-  .header__login-form {
+  &__login-form {
     @include media-breakpoint-up(md) {
       padding: 60px;
     }
@@ -310,14 +311,14 @@
     }
   }
 
-  .header__login-inputs {
+  &__login-inputs {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
   }
 
-  .header__login-input {
+  &__login-input {
     height: 50px;
     padding: 0 25px;
     font-size: 18px;
@@ -326,20 +327,20 @@
     color: var(--color-text-primary-25, #100e0e40);
   }
 
-  .header__login-networks {
+  &__login-networks {
     display: flex;
     gap: 5px;
     margin-bottom: 23px;
   }
 
-  .header__login-network {
+  &__login-network {
     width: 34px;
     height: 34px;
     background: #000;
     border-radius: 5px;
   }
 
-  .header__login-buttons {
+  &__login-buttons {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -347,35 +348,35 @@
     margin-bottom: 40px;
   }
 
-  .header__login-remember {
+  &__login-remember {
     flex: 100%;
     display: flex;
     gap: 13px;
     align-items: center;
   }
 
-  .header__login-remember-checkbox {
+  &__login-remember-checkbox {
     width: 24px;
     height: 24px;
   }
 
-  .header__login-remember-text {
+  &__login-remember-text {
     line-height: 18.75px;
     color: var(--color-text-primary);
   }
 
-  .header__login-helper {
+  &__login-helper {
     display: flex;
     gap: 10px;
   }
 
-  .header__login-helper-text {
+  &__login-helper-text {
     text-decoration: none;
     line-height: 18.75px;
     color: var(--color-text-secondary);
   }
 
-  .header__login-helper-separator {
+  &__login-helper-separator {
     color: var(--color-text-primary-25);
   }
 }

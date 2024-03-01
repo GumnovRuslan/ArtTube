@@ -1,0 +1,120 @@
+.section-map {
+  position: relative;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 685px;
+  }
+
+  &__layer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__filter {
+    @include media-breakpoint-up(md) {
+      max-width: 358px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__map-container {
+    width: 100%;
+    height: 685px;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__list-container {
+    height: min-content;
+
+    @include media-breakpoint-up(md) {
+      position: relative;
+      z-index: 2;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+  }
+
+  &__list-checkbox {
+    display: none;
+  }
+
+  #list-checkbox-height:checked ~ &__list > &__list-content {
+    max-height: 0px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-0, #ffffff);
+  }
+
+  &__list-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 14px 19px;
+    max-height: 50px;
+    border: var(--border-primary);
+    color: var(--color-text-secondary);
+
+    @include media-breakpoint-down(md) {
+      justify-content: start;
+    }
+  }
+
+  &__list-header-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  &__list-header-text {
+    font-size: 18px;
+    line-height: 12.6px;
+  }
+
+  &__list-content {
+    overflow: hidden;
+    max-height: 500px;
+    transition: all 0.2s;
+  }
+
+  &__list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    border-left: var(--border-primary);
+    border-right: var(--border-primary);
+    border-bottom: var(--border-primary);
+  }
+
+  &__list-item {
+    font-size: 18px;
+  }
+}
