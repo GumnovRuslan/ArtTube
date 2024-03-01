@@ -204,6 +204,7 @@
     border-radius: 50px;
     background: var(--color-bg-0, #ffffff);
     color: var(--color-light-black, #100e0e);
+    cursor: pointer;
 
     @include media-breakpoint-down(md) {
       display: none;
@@ -219,6 +220,7 @@
     text-decoration: none;
     color: var(--color-text-secondary, #ff711f);
     font-size: 18px;
+    cursor: pointer;
   }
 
   &__btn-language-text,
@@ -268,7 +270,7 @@
   &__nav-links {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 
     @include media-breakpoint-up(md) {
       padding: 20px 0;
@@ -280,6 +282,12 @@
     font-size: 20px;
     line-height: 23.44px;
     color: var(--color-text-black, #000000);
+    padding: 5px 0;
+
+    &:hover {
+      color: var(--color-text-secondary);
+      transition: 0.2s;
+    }
   }
 
   &__login {

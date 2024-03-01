@@ -5,8 +5,8 @@ var htmlTop = { title: "ArtTube map" };
 <%=_.template(require('./../includes/_html-top-map.html').default)(htmlTop)%>
 <%=_.template(require('./../includes/header.html').default)()%>
 
-<%=_.template(require('./../includes/search.html').default)()%>
 <main>
+  <%=_.template(require('./../includes/search_mini.html').default)()%>
   <%=_.template(require('./../includes/map.html').default)()%>
 </main>
 
