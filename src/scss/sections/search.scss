@@ -1,10 +1,6 @@
 .search-events {
-  &__map-link {
+  &__map {
     display: flex;
-    gap: 7px;
-    color: var(--color-text-secondary, #ff711f);
-    margin-bottom: 50px;
-    text-decoration: none;
 
     @include media-breakpoint-up(md) {
       justify-content: end;
@@ -13,6 +9,14 @@
     @include media-breakpoint-down(md) {
       padding: 0 20px;
     }
+  }
+
+  &__map-link {
+    display: flex;
+    gap: 7px;
+    color: var(--color-text-secondary, #ff711f);
+    margin-bottom: 50px;
+    text-decoration: none;
   }
 
   &__map-link-icon {
