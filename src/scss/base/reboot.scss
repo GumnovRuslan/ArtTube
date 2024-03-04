@@ -1,35 +1,21 @@
-:root {
-  font-size: var(--typography-htmlFontSize);
-}
-
 * {
-  scrollbar-color: var(--palette-primary-main) var(--palette-background-default);
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: var(--palette-background-default);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--palette-primary-main);
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--typography-fontFamily);
 }
 
 body {
-  font-family: var(--typography-fontFamily);
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: 100vh;
-  color: var(--palette-text-primary);
-  background-color: var(--palette-background-default);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
-.rub::after {
-  content: " ₽";
+html {
+  overflow-x: hidden;
 }
 
 h1,
@@ -38,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--typography-fontFamily-headings);
+  font-family: var(--typography-fontFamily);
 }
 
 h1,
@@ -48,7 +34,7 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
+  margin: 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -71,6 +57,9 @@ textarea {
 
 button {
   cursor: pointer;
+  border: none;
+  background: transparent;
+  // font-size: var(--typography-htmlFontSize);
 }
 
 input,
@@ -86,28 +75,17 @@ textarea {
   }
 }
 
-.spacing-top {
-  @include media-breakpoint-down(xxl) {
-    padding-top: 40px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    padding-top: 60px;
-  }
+img {
+  width: 100%;
+  height: 100%;
 }
 
-.spacing-bottom {
-  @include media-breakpoint-down(xxl) {
-    padding-bottom: 40px;
-  }
+// main {
+//   @include media-breakpoint-up(md) {
+//     margin: 80px 0 160px;
+//   }
 
-  @include media-breakpoint-up(xxl) {
-    padding-bottom: 60px;
-  }
-}
-
-.block-center {
-  max-width: max-content;
-  margin-right: auto;
-  margin-left: auto;
-}
+//   @include media-breakpoint-down(md) {
+//     margin: 20px 0 50px;
+//   }
+// }

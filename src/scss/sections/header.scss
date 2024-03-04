@@ -1,2 +1,390 @@
 .header {
+  width: 100%;
+
+  #checkbox-menu,
+  #checkbox-login,
+  #checkbox-language {
+    display: none;
+  }
+
+  .language-en {
+    display: none;
+  }
+
+  #checkbox-language:checked ~ &__inner .language-ru {
+    display: none;
+  }
+  #checkbox-language:checked ~ &__inner .language-en {
+    display: block;
+  }
+
+  #checkbox-login:checked ~ &__inner &__login {
+    display: block;
+  }
+  #checkbox-login:checked ~ &__inner &__nav {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  #checkbox-menu:checked ~ &__inner > &__menu {
+    @include media-breakpoint-down(md) {
+      left: 0px;
+    }
+  }
+
+  #checkbox-menu:checked ~ &__inner &__nav {
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  #checkbox-menu:checked ~ &__inner &__burger-line:nth-child(2) {
+    opacity: 0;
+    width: 0%;
+  }
+
+  #checkbox-menu:checked ~ &__inner &__burger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  #checkbox-menu:checked ~ &__inner &__burger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 4;
+    background: var(--color-bg-0, #ffffff);
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 100px;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      height: 115px;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      padding: 0 50px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0 20px;
+    }
+  }
+
+  &__front {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      justify-content: space-between;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 42px;
+    height: 40px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &__burger-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+    height: 14px;
+    gap: 4px;
+  }
+
+  &__burger-line {
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background: var(--color-bg-700, #4d4d4d);
+    transition: 0.5s;
+    transform-origin: 50% 50%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 70px;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+  }
+
+  &__logo-logo-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--icon-secondary-color);
+  }
+
+  &__logo-text-icon {
+    width: 96px;
+    height: 19px;
+    color: var(--icon-primary-color);
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    z-index: 3;
+    top: calc(0px + 70px);
+    left: 100%;
+    display: flex;
+    width: 100%;
+    background: var(--color-bg-0, #ffffff);
+    transition: all 0.5s ease-in-out;
+
+    @include media-breakpoint-up(md) {
+      position: static;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      flex-direction: column;
+      min-height: calc(100vh - 70px);
+      max-height: calc(100vh - 70px);
+      padding: 0 20px;
+    }
+  }
+
+  &__buttons-top,
+  &__buttons-bottom {
+    display: flex;
+
+    @include media-breakpoint-up(md) {
+      gap: 50px;
+      height: 40px;
+    }
+  }
+
+  &__buttons-top {
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+  &__buttons-bottom {
+    @include media-breakpoint-down(md) {
+      padding: 20px 0 25px;
+      border-top: 1px solid var(--color-border);
+    }
+  }
+
+  &__btn-menu {
+    padding: 8px 19px;
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    background: var(--color-bg-0, #ffffff);
+    color: var(--color-light-black, #100e0e);
+    cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__btn-language,
+  &__btn-login,
+  &__btn-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--color-text-secondary, #ff711f);
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  &__btn-language-text,
+  &__btn-login-text,
+  &__btn-location-text {
+    color: inherit;
+  }
+
+  &__btn-language-text {
+    text-transform: uppercase;
+  }
+
+  &__btn-language-icon,
+  &__btn-login-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--icon-secondary-color);
+  }
+
+  &__btn-location-icon {
+    width: 20px;
+    height: 24px;
+    color: var(--icon-secondary-color);
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    overflow: auto;
+    background: var(--color-bg-0, #ffffff);
+
+    @include media-breakpoint-up(md) {
+      display: none;
+      position: absolute;
+      max-width: 450px;
+      padding: 34px 47px 39px;
+      left: 100px;
+      top: 100%;
+      border: 1px solid var(--color-border);
+    }
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      padding: 22px 0;
+    }
+  }
+
+  &__nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include media-breakpoint-up(md) {
+      padding: 20px 0;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 23.44px;
+    color: var(--color-text-black, #000000);
+    padding: 5px 0;
+
+    &:hover {
+      color: var(--color-text-secondary);
+      transition: 0.2s;
+    }
+  }
+
+  &__login {
+    flex: 1 1 auto;
+    display: none;
+    background: var(--color-bg-0, #ffffff);
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      right: 100px;
+      z-index: 4;
+      top: 100%;
+      left: auto;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__login-form {
+    @include media-breakpoint-up(md) {
+      padding: 60px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 30px 0;
+    }
+  }
+
+  &__login-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__login-input {
+    height: 50px;
+    padding: 0 25px;
+    font-size: 18px;
+    line-height: 21.09px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary-25, #100e0e40);
+  }
+
+  &__login-networks {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 23px;
+  }
+
+  &__login-network {
+    width: 34px;
+    height: 34px;
+    background: #000;
+    border-radius: 5px;
+  }
+
+  &__login-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+
+  &__login-remember {
+    flex: 100%;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+  }
+
+  &__login-remember-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__login-remember-text {
+    line-height: 18.75px;
+    color: var(--color-text-primary);
+  }
+
+  &__login-helper {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__login-helper-text {
+    text-decoration: none;
+    line-height: 18.75px;
+    color: var(--color-text-secondary);
+  }
+
+  &__login-helper-separator {
+    color: var(--color-text-primary-25);
+  }
 }

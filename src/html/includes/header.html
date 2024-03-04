@@ -1,3 +1,173 @@
 <header class="header">
-  <div class="container">header</div>
+  <input type="checkbox" id="checkbox-menu" />
+  <input type="checkbox" id="checkbox-login" />
+  <input type="checkbox" id="checkbox-language" />
+  <div class="header__inner">
+    <div class="header__front">
+      <a href="/" class="header__logo">
+        <span class="header__logo-logo-icon">
+          <!-- snippets icon_logo_logo -->
+          <svg viewBox="0 0 40 40" fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M2.38535 0H39.9546V37.271L31.3077 28.9223V24.748L14.6102 8.34871H10.7341L2.38535 0ZM0 2.38535L37.271 39.3582H25.3443L16.1011 30.115L6.26153 39.3582H0V33.9912L9.83955 24.1516L0 14.3121V2.38535ZM22.9589 8.34872L31.3076 16.6974V8.34872H22.9589Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <span class="header__logo-text-icon">
+          <!-- snippets icon_logo_text -->
+          <svg viewBox="0 0 96 19" fill="none">
+            <path
+              d="M6.4107 11.5384H11.1397L8.81313 4.2404L6.4107 11.5384ZM6.65094 0H11.0512L17.6515 18.547H13.4283L12.2271 14.7344H5.36122L4.07149 18.547H0L6.65094 0Z"
+              fill="currentColor"
+            />
+            <path
+              d="M27.2233 4.50464C27.2908 4.50464 27.3456 4.50883 27.3877 4.51722C27.4383 4.51722 27.5437 4.52141 27.7038 4.5298V8.20397C27.4762 8.17881 27.2739 8.16203 27.0969 8.15364C26.9199 8.14525 26.7766 8.14106 26.667 8.14106C25.2171 8.14106 24.2435 8.61082 23.7461 9.55033C23.468 10.0788 23.3289 10.8925 23.3289 11.9914V18.547H19.6999V4.83179H23.1392V7.22252C23.6956 6.30817 24.1803 5.68322 24.5933 5.34768C25.2677 4.78565 26.1444 4.50464 27.2233 4.50464Z"
+              fill="currentColor"
+            />
+            <path
+              d="M28.4119 7.51192V4.95762H30.3339V1.13245H33.8996V4.95762H36.1376V7.51192H33.8996V14.7596C33.8996 15.3216 33.9712 15.674 34.1145 15.8166C34.2578 15.9508 34.6962 16.0179 35.4295 16.0179C35.5391 16.0179 35.6529 16.0179 35.7709 16.0179C35.8974 16.0095 36.0196 16.0011 36.1376 15.9927V18.6728L34.4306 18.7358C32.7279 18.7945 31.5646 18.5009 30.9408 17.855C30.5362 17.4439 30.3339 16.8106 30.3339 15.955V7.51192H28.4119Z"
+              fill="currentColor"
+            />
+            <path
+              d="M52.2845 0V3.28411H46.7083V18.547H42.7886V3.28411H37.1871V0H52.2845Z"
+              fill="currentColor"
+            />
+            <path
+              d="M55.9514 4.83179V13.0987C55.9514 13.8788 56.0441 14.466 56.2295 14.8603C56.5583 15.5565 57.2032 15.9046 58.1641 15.9046C59.3949 15.9046 60.2378 15.4097 60.693 14.4199C60.929 13.883 61.0471 13.1742 61.0471 12.2934V4.83179H64.7013V18.547H61.1988V16.6093C61.1651 16.6512 61.0808 16.777 60.9459 16.9868C60.811 17.1965 60.6509 17.381 60.4654 17.5404C59.9006 18.0437 59.3527 18.3876 58.8216 18.5722C58.299 18.7567 57.6836 18.849 56.9756 18.849C54.9356 18.849 53.5616 18.1192 52.8535 16.6596C52.4573 15.8543 52.2592 14.6673 52.2592 13.0987V4.83179H55.9514Z"
+              fill="currentColor"
+            />
+            <path
+              d="M75.6387 4.5298C77.451 4.5298 78.8672 5.17991 79.8872 6.48013C80.9156 7.78035 81.4298 9.45806 81.4298 11.5132C81.4298 13.6439 80.924 15.4097 79.9125 16.8106C78.9009 18.2115 77.489 18.9119 75.6766 18.9119C74.5386 18.9119 73.624 18.6854 72.9328 18.2325C72.5197 17.964 72.073 17.4943 71.5925 16.8232V18.547H68.0647V0.0251656H71.6557V6.61854C72.1109 5.98102 72.6124 5.49448 73.1604 5.15894C73.8094 4.73951 74.6355 4.5298 75.6387 4.5298ZM74.7156 15.955C75.6429 15.955 76.3636 15.5817 76.8778 14.8351C77.392 14.0885 77.6491 13.1071 77.6491 11.8907C77.6491 10.9177 77.5227 10.1124 77.2698 9.47483C76.7893 8.26689 75.9042 7.66291 74.6145 7.66291C73.3079 7.66291 72.4101 8.2543 71.9212 9.43709C71.6683 10.0662 71.5419 10.8799 71.5419 11.8781C71.5419 13.0525 71.8032 14.0256 72.3258 14.7974C72.8485 15.5691 73.6451 15.955 74.7156 15.955Z"
+              fill="currentColor"
+            />
+            <path
+              d="M89.459 7.42384C88.6244 7.42384 87.9754 7.68389 87.5117 8.20397C87.0565 8.72406 86.7699 9.4287 86.6519 10.3179H92.2534C92.1944 9.36998 91.9035 8.65276 91.3809 8.16623C90.8667 7.6713 90.2261 7.42384 89.459 7.42384ZM89.459 4.46689C90.6054 4.46689 91.638 4.6808 92.5568 5.10861C93.4757 5.53642 94.2343 6.2117 94.8328 7.13444C95.3723 7.94812 95.7221 8.89183 95.8823 9.96556C95.975 10.5947 96.013 11.5007 95.9961 12.6834H86.5634C86.614 14.0592 87.0481 15.0238 87.8658 15.5775C88.3631 15.9214 88.9616 16.0934 89.6613 16.0934C90.4031 16.0934 91.0058 15.8837 91.4694 15.4642C91.7223 15.2377 91.9457 14.9232 92.1396 14.5205H95.8191C95.7264 15.3342 95.3007 16.1605 94.542 16.9993C93.3619 18.3331 91.7097 19 89.5854 19C87.8321 19 86.2852 18.438 84.9449 17.3139C83.6046 16.1898 82.9345 14.3611 82.9345 11.8278C82.9345 9.45386 83.5372 7.63355 84.7426 6.36689C85.9565 5.10022 87.5286 4.46689 89.459 4.46689Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </a>
+      <label for="checkbox-menu" class="header__burger">
+        <span class="header__burger-container">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </span>
+      </label>
+    </div>
+    <div class="header__menu">
+      <div class="header__buttons-top">
+        <label for="checkbox-language" class="header__btn-language">
+          <span class="header__btn-language-icon">
+            <!-- snippets icon_language -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.62988 15.4998H21.3699M2.62988 8.4998H21.3699M11.9999 2.0498C11.9999 2.0498 15.9999 5.9998 15.9999 11.9998C15.9999 17.9998 11.9999 21.9498 11.9999 21.9498C11.9999 21.9498 7.99988 17.9998 7.99988 11.9998C7.99988 5.9998 11.9999 2.0498 11.9999 2.0498Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="header__btn-language-text language-ru">RU</span>
+          <span class="header__btn-language-text language-en">EN</span>
+        </label>
+        <label for="checkbox-login" class="header__btn-login">
+          <span class="header__btn-login-icon">
+            <!-- snippets icon_exit_door -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9 2H18C19.1 2 20 2.9 20 4V20C20 21.1 19.1 22 18 22H9C7.9 22 7 21.1 7 20V18H9V20H18V4H9V6H7V4C7 2.9 7.9 2 9 2Z"
+                fill="currentColor"
+              />
+              <path
+                d="M10.09 15.59L11.5 17L16.5 12L11.5 7L10.09 8.41L12.67 11H3V13H12.67L10.09 15.59Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+
+          <span class="header__btn-login-text"> Войти </span>
+        </label>
+      </div>
+      <div class="header__nav">
+        <div class="header__nav-links">
+          <a href="/" class="header__nav-link">Главная</a>
+          <a href="#" class="header__nav-link">События</a>
+          <a href="#" class="header__nav-link">Парусная команда</a>
+          <a href="#" class="header__nav-link">Личный блог Валерии Коваленко</a>
+          <a href="#" class="header__nav-link">Arttube.Editions</a>
+          <a href="#" class="header__nav-link">Специальный проект</a>
+          <a href="#" class="header__nav-link">Партнеры</a>
+          <a href="/blog.html" class="header__nav-link">Блог</a>
+          <a href="#" class="header__nav-link">О проекте</a>
+          <a href="#" class="header__nav-link">Контакты</a>
+        </div>
+      </div>
+      <div class="header__login">
+        <form class="header__login-form">
+          <div class="header__login-inputs">
+            <input type="text" class="header__login-input" placeholder="Логин или email" />
+            <input type="password" class="header__login-input" placeholder="Пароль" />
+          </div>
+          <div class="header__login-networks">
+            <div class="header__login-network"></div>
+            <div class="header__login-network"></div>
+            <div class="header__login-network"></div>
+            <div class="header__login-network"></div>
+            <div class="header__login-network"></div>
+            <div class="header__login-network"></div>
+          </div>
+          <div class="header__login-buttons">
+            <button class="header__login-btn-login custom-btn-primary" type="button">Войти</button>
+            <label class="header__login-remember">
+              <input type="checkbox" class="header__login-remember-checkbox" />
+              <span class="header__login-remember-text">Запомнить меня</span>
+            </label>
+          </div>
+          <div class="header__login-helper">
+            <a href="#" class="header__login-helper-text">Забыли пароль?</a>
+            <span class="header__login-helper-separator">/</span>
+            <a href="#" class="header__login-helper-text">Регистрация</a>
+          </div>
+        </form>
+      </div>
+      <div class="header__buttons-bottom">
+        <label for="checkbox-menu" class="header__btn-menu" type="button">Меню</label>
+        <button class="header__btn-location" type="button">
+          <span class="header__btn-location-icon">
+            <!-- snippets icon_location -->
+            <svg viewBox="0 0 16 19" fill="none">
+              <path
+                d="M7.99961 10.292C9.32509 10.292 10.3996 9.22867 10.3996 7.91699C10.3996 6.60532 9.32509 5.54199 7.99961 5.54199C6.67413 5.54199 5.59961 6.60532 5.59961 7.91699C5.59961 9.22867 6.67413 10.292 7.99961 10.292Z"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.99961 1.5835C6.30222 1.5835 4.67436 2.25076 3.47413 3.43849C2.27389 4.62622 1.59961 6.23712 1.59961 7.91683C1.59961 9.41466 1.92121 10.3947 2.79961 11.4793L7.99961 17.4168L13.1996 11.4793C14.078 10.3947 14.3996 9.41466 14.3996 7.91683C14.3996 6.23712 13.7253 4.62622 12.5251 3.43849C11.3249 2.25076 9.697 1.5835 7.99961 1.5835V1.5835Z"
+                stroke="currentColor"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="header__btn-location-text">Москва</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>

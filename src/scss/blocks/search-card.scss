@@ -1,0 +1,128 @@
+.search-events__card {
+  display: flex;
+  border: 1px solid var(--color-border);
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+
+  .search-events__card-image {
+    flex: 1 0 auto;
+    width: 305px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: 100%;
+    }
+
+    source {
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .search-events__card-content {
+    @include media-breakpoint-up(md) {
+      padding: 30px 35px 25px;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 20px 20px 25px;
+    }
+  }
+
+  .search-events__card-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31.2px;
+    color: var(--color-text-primary, #100e0e);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .search-events__card-text {
+    font-size: 18px;
+    line-height: 23.4px;
+    margin-bottom: 30px;
+    color: var(--color-text-black-5);
+  }
+
+  .search-events__card-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      gap: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 12px;
+    }
+  }
+
+  .search-events__card-date,
+  .search-events__card-place {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .search-events__card-date {
+    color: var(--color-text-primary, #100e0e);
+  }
+  .search-events__card-date-icon {
+    width: 17px;
+    height: 17px;
+    color: var(--icon-primary-color);
+  }
+
+  .search-events__card-place {
+    color: var(--color-text-secondary, #ff711f);
+  }
+  .search-events__card-place-icon {
+    width: 16px;
+    height: 19px;
+    color: var(--icon-secondary-color);
+  }
+
+  .search-events__card-date-text,
+  .search-events__card-place-text {
+    font-size: 18px;
+    line-height: 12.6px;
+    color: inherit;
+  }
+
+  .search-events__card-grades {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .search-events__card-grade {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text-3, #100e0e4d);
+  }
+
+  .search-events__card-grade-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--icon-third-color);
+  }
+
+  .search-events__card-grade-text {
+    line-height: 11.2px;
+    color: inherit;
+  }
+}

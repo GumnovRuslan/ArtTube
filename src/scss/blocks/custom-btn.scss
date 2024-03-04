@@ -1,15 +1,26 @@
 .custom-btn {
-  font-family: Roboto, sans-serif;
   display: block;
   width: 242px;
   height: 64px;
-  margin: 0 auto;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 1.5px;
   color: white;
   background: #ff711f;
-  border: none;
-  padding: 0;
+
+  &-primary {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 0 30px;
+    height: 50px;
+    color: var(--color-text-900, #ffffff);
+    background: var(--color-btn, #ff711f);
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
 }

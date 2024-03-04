@@ -1,17 +1,18 @@
 <%
 var htmlTop = { title: "ArtTube" };
-var heading = { title: 'О НАС' };
 %>
 
 <%=_.template(require('./../includes/_html-top.html').default)(htmlTop)%>
 <%=_.template(require('./../includes/header.html').default)()%>
 
 <main>
-  <%=_.template(require('./../includes/home/hero.html').default)()%>
-  <%=_.template(require('./../includes/home/events.html').default)()%>
-  <%=_.template(require('./../includes/home/blog.html').default)()%>
-  <%=_.template(require('./../includes/home/gallery.html').default)()%>
-  <%=_.template(require('./../includes/home/join.html').default)()%>
+  <%=_.template(require('./../includes/hero.html').default)()%>
+  <%=_.template(require('./../includes/search_full.html').default)()%>
+  <%=_.template(require('./../includes/home_banner.html').default)()%>
+  <%=_.template(require('./../includes/current_events.html').default)()%>
+  <%=_.template(require('./../includes/blog_latest.html').default)()%>
+  <%=_.template(require('./../includes/gallery.html').default)()%>
+  <%=_.template(require('./../includes/join.html').default)()%>
 </main>
 
 <%=_.template(require('./../includes/footer.html').default)()%>

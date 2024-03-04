@@ -1,14 +1,26 @@
 .section-title {
   font-weight: 400;
-  font-size: clamp(26px, 5vw, 42px);
-  line-height: 49.22px;
   color: #100e0e;
 
-  &:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-family: var(--typography-fontFamily-headings);
+  @include media-breakpoint-up(xl) {
+    font-size: 42px;
+    line-height: 49.22px;
   }
 
-  @include media-breakpoint-down(md) {
-    text-align: center;
+  @include media-breakpoint-between(sd, xl) {
+    font-size: 34px;
+    line-height: 41.13px;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    padding: 0 20px;
+    font-size: 34px;
+    line-height: 36.13px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 20px;
+    font-size: 26px;
+    line-height: 28.13px;
   }
 }

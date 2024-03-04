@@ -1,5 +1,5 @@
 // Libs
-@import "~modern-normalize/modern-normalize.css";
+// @import "~modern-normalize/modern-normalize.css";
 
 // Base
 @import "base/variables";
@@ -11,21 +11,26 @@
 
 // Blocks
 @import "blocks/custom-btn";
-@import "blocks/buttons";
-@import "blocks/containers";
-@import "blocks/icons";
-@import "blocks/form-control";
-@import "blocks/form-check";
-@import "blocks/pagination";
-@import "blocks/text-box";
+@import "blocks/button";
+@import "blocks/search-card";
+@import "blocks/filter";
+@import "blocks/banner";
+@import "blocks/search_mini";
+@import "blocks/card-institution";
+@import "blocks/card_event";
+@import "blocks/card_primary";
+
 @import "blocks/title";
-@import "blocks/section";
+@import "blocks/custom-scroll";
 
 // Sections
-@import "sections/home";
-
-@import "sections/footer";
 @import "sections/header";
-@import "blocks/nav-list";
+@import "sections/home";
+@import "sections/search";
+@import "sections/event-detail";
+@import "sections/institution_detail";
+@import "sections/blog";
+@import "sections/map";
+@import "sections/footer";
 
 // Templates

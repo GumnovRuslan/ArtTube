@@ -1,0 +1,13 @@
+.button {
+  width: 100%;
+  padding: 20px;
+  font-size: inherit;
+  background: var(--color-btn, #ff711f);
+
+  &__text {
+    text-transform: uppercase;
+    font-size: inherit;
+    line-height: 21.09px;
+    color: var(--color-text-900, #ffffff);
+  }
+}

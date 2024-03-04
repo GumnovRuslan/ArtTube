@@ -1,0 +1,68 @@
+.search-events {
+  &__map {
+    display: flex;
+
+    @include media-breakpoint-up(md) {
+      justify-content: end;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0 20px;
+    }
+  }
+
+  &__map-link {
+    display: flex;
+    gap: 7px;
+    color: var(--color-text-secondary, #ff711f);
+    margin-bottom: 50px;
+    text-decoration: none;
+  }
+
+  &__map-link-icon {
+    width: 24px;
+    height: 21px;
+  }
+
+  &__map-link-text {
+    font-size: 18px;
+    line-height: 21.09px;
+    color: inherit;
+  }
+
+  &__content {
+    display: flex;
+    gap: 40px;
+
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+    }
+  }
+
+  &__filter {
+    @include media-breakpoint-up(xl) {
+      flex: 1 0 auto;
+      max-width: 26%;
+      width: 100%;
+      height: 100%;
+    }
+    @include media-breakpoint-down(xl) {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+      gap: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      gap: 20px;
+    }
+  }
+}
