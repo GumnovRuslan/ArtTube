@@ -4170,6 +4170,11 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+vanilla-calendar-pro@^2.9.6:
+  version "2.9.6"
+  resolved "https://registry.yarnpkg.com/vanilla-calendar-pro/-/vanilla-calendar-pro-2.9.6.tgz#571ff8cafb1fb2a10e5b26a23011d0cb57a0160f"
+  integrity sha512-0bkcRd27urEGxgqc/kbV1ndSnOhmp/4V1v/tUiw67nHzZKMWrcDB9nM42LEu/0qBptEVsBtuDvXeu+7hZ0WuhQ==
+
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"

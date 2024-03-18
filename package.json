@@ -11,7 +11,8 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "vanilla-calendar-pro": "^2.9.6"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",

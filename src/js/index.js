@@ -1,6 +1,9 @@
 import { map } from "./includes/map";
+import VanillaCalendar from "vanilla-calendar-pro";
 
-map();
+const correctData = (data, sign = ".") => data.split("-").reverse().join(sign);
+
+// map();
 
 // function isTrue(el, func) {
 //   if (!!el) func(el);
@@ -13,7 +16,34 @@ map();
 // filterBtnComplete.addEventListener("click", filterComplete);
 // filterBtnReset.addEventListener("click", filterClean);
 
-let checkbox = document.getElementById("checkbox-menu");
-checkbox.addEventListener("input", (e) => {
-  if (window.innerWidth < 768) document.body.style.position = e.target.checked ? "fixed" : "static";
-});
+let options = {
+  type: "multiple",
+  months: 4,
+  jumpMonths: 1,
+  settings: {
+    lang: "ru",
+    range: {
+      disablePast: true,
+      disableGaps: true,
+    },
+    selection: {
+      day: "multiple-ranged",
+    },
+    visibility: {
+      daysOutside: false,
+      theme: "light",
+    },
+  },
+  actions: {
+    clickDay(event, self) {
+      window.calendarInputFirst.value = `${correctData(self.selectedDates[0])}`;
+      window.calendarInputSecond.value = `${correctData(self.selectedDates.at(-1))}`;
+    },
+    clickArrow(event, self) {
+      console.log(self.selectedYear, self.selectedMonth);
+    },
+  },
+};
+
+let calendar = new VanillaCalendar("#calendar", options);
+calendar.init();
